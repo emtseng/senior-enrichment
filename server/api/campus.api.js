@@ -13,14 +13,12 @@ const returnAllCampuses = (req, res, next) => {
   Campus.findAll({
     where: req.query //just in case there is a query string
   })
-  .then(dbResponse => dbResponse.data)
   .then(campuses => res.json(campuses))
   .catch(next)
 }
 
 const addNewCampus = (req, res, next) => {
   Campus.create(req.body)
-  .then(dbResponse => dbResponse.data)
   .then(createdCampus => res.json(createdCampus))
   .catch(next)
 }
