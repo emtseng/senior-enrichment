@@ -1,7 +1,7 @@
 'use strict'
 import React from 'react'
 import { render } from 'react-dom'
-import { Router, Route, onEnter } from 'react-router'
+import { Router, Route, onEnter, hashHistory } from 'react-router'
 import { Provider } from 'react-redux'
 
 import store from './store'
@@ -14,7 +14,7 @@ const onAppEnter = () => {
 
 render(
   <Provider store={store}>
-    <Router>
+    <Router history={hashHistory} >
       <Route path="/" component={App} onEnter={onAppEnter} />
     </Router>
   </Provider>,
