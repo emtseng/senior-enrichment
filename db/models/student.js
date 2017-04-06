@@ -1,4 +1,4 @@
-const db = require('./database');
+const db = require('../index');
 const Sequelize = require('sequelize');
 
 const Student = db.define('Student', {
@@ -6,7 +6,10 @@ const Student = db.define('Student', {
     type: Sequelize.STRING
   },
   email: {
-    type: Sequelize.EMAIL
+    type: Sequelize.STRING,
+    validate: {
+      isEmail: true
+    }
   }
 }, {
   //options can go here

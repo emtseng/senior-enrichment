@@ -1,4 +1,4 @@
-const db = require('./database');
+const db = require('../index');
 const Sequelize = require('sequelize');
 
 const Campus = db.define('Campus', {
@@ -6,7 +6,10 @@ const Campus = db.define('Campus', {
     type: Sequelize.STRING
   },
   image: {
-    type: Sequelize.URL
+    type: Sequelize.STRING,
+    validate: {
+      isUrl: true
+    }
   }
 }, {
   //options can go here
