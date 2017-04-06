@@ -6,9 +6,10 @@ import { Provider } from 'react-redux'
 
 import store from './store'
 import App from './components/App'
+import { getAllCampuses } from './reducers/campus.reducer'
 
 const onAppEnter = () => {
-  store.dispatch(/* ADD LOADER */)
+  store.dispatch(getAllCampuses())
 }
 
 render(

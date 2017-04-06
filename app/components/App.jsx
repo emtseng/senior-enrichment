@@ -10,7 +10,11 @@ class App extends Component {
       <div>
         <h3>Did this work???</h3>
         <h4>Did I pass my props down???</h4>
-
+        <ul>
+          {this.props.allCampuses && this.props.allCampuses.map(campus =>
+            (<li>{campus.name}</li>)
+          )}
+        </ul>
       </div>
     )
   }
@@ -20,7 +24,7 @@ class App extends Component {
 
 const mapPropsToState = (store) => {
   return {
-
+    allCampuses: store.allCampuses
   }
 }
 
