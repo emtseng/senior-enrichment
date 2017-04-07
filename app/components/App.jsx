@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-
+import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import CampusForm from './campusform'
 
 /* ------ COMPONENT ----- */
 
@@ -10,11 +10,7 @@ class App extends Component {
       <div>
         <h3>Did this work???</h3>
         <h4>Did I pass my props down???</h4>
-        <ul>
-          {this.props.allCampuses && this.props.allCampuses.map(campus =>
-            (<li>{campus.name}</li>)
-          )}
-        </ul>
+        <CampusForm />
       </div>
     )
   }
@@ -24,14 +20,12 @@ class App extends Component {
 
 const mapPropsToState = (store) => {
   return {
-    allCampuses: store.allCampuses
+    allCampuses: store.campus.allCampuses
   }
 }
 
 const mapDispatchToState = (dispatch) => {
-  return {
-
-  }
+  return {}
 }
 
 export default connect(mapPropsToState, mapDispatchToState)(App)
