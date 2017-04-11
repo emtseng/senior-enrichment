@@ -25,13 +25,11 @@ class CampusForm extends Component {
   handleSubmit(e) {
     e.preventDefault() //remember to use this to prevent it from auto-refreshing
     e.persist()
-    console.log(e.target.campus)
     this.setState({
       selectedCampus: e.target.campus.value
     })
   }
   render() {
-    console.log("this.state", this.state)
     return (
       <div>
         <h3>
