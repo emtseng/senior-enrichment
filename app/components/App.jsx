@@ -8,8 +8,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <h3>Did this work???</h3>
-        <h4>Did I pass my props down???</h4>
+        <h3>Testing form capabilities and backend routing:</h3>
         <CampusForm />
       </div>
     )

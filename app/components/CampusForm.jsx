@@ -32,6 +32,7 @@ class CampusForm extends Component {
   render() {
     return (
       <div>
+        <h1>Selected Campus:</h1>
         <h3>
           {this.state.selectedCampus}
         </h3>
@@ -48,7 +49,7 @@ class CampusForm extends Component {
         </div>
 
         <div>
-          <p>Do it with a more annoying form type:</p>
+          <p>Select using a more troublesome form type:</p>
           <form onSubmit={this.handleSubmit} >
             <label>Campus: </label>
             <input
@@ -59,7 +60,7 @@ class CampusForm extends Component {
               onChange={this.handleChange}
               name="campus"
             />
-            <button type='submit' className='btn btn-success' disabled={this.props.buttonDisabled}>Submit</button>
+            <button type='submit' className='btn btn-success' >Submit</button>
           </form>
         </div>
       </div>
